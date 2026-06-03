@@ -86,4 +86,46 @@
       }
     });
   });
+
+  /* Sticky header — scrolled state */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    function updateHeader() {
+      header.classList.toggle("is-scrolled", window.scrollY > 20);
+    }
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+  }
+
+  /* Scroll reveal for sections */
+  var revealTargets = document.querySelectorAll(".section, .social-proof");
+  var prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) {
+    revealTargets.forEach(function (el) {
+      el.classList.add("reveal", "is-visible");
+    });
+  } else {
+    revealTargets.forEach(function (el) {
+      el.classList.add("reveal");
+    });
+
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -48px 0px" }
+    );
+
+    revealTargets.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  }
 })();

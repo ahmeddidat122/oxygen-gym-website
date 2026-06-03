@@ -1,31 +1,54 @@
 :root {
   --color-primary: #0056d2;
-  --color-primary-dark: #0044a8;
-  --color-primary-light: #3d7fe8;
-  --color-bg-dark: #121212;
-  --color-bg-light: #f8f9fa;
+  --color-primary-dark: #003d99;
+  --color-primary-light: #4d8fff;
+  --color-accent: #00c2ff;
+  --color-bg-dark: #0c0c0e;
+  --color-bg-elevated: #16161a;
+  --color-bg-light: #f4f6f9;
   --color-bg-white: #ffffff;
-  --color-text: #212529;
-  --color-text-muted: #6c757d;
+  --color-text: #1a1d21;
+  --color-text-muted: #5c6570;
   --color-text-inverse: #ffffff;
-  --color-border: #dee2e6;
+  --color-border: #e2e8f0;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
   --color-success: #198754;
 
-  --overlay-hero: rgba(0, 0, 0, 0.5);
+  --gradient-primary: linear-gradient(135deg, #0056d2 0%, #003d99 50%, #002266 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #0066f0 0%, #0044b8 100%);
+  --gradient-hero: linear-gradient(
+    180deg,
+    rgba(12, 12, 14, 0.35) 0%,
+    rgba(12, 12, 14, 0.55) 45%,
+    rgba(12, 12, 14, 0.92) 100%
+  );
+  --gradient-dark: linear-gradient(180deg, #16161a 0%, #0c0c0e 100%);
+  --gradient-mesh: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 86, 210, 0.15), transparent);
+
+  --overlay-hero: rgba(12, 12, 14, 0.45);
 
   --font-heading: "Oswald", sans-serif;
   --font-body: "Inter", sans-serif;
 
-  --radius-btn: 6px;
-  --radius-card: 8px;
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 8px 30px rgba(0, 86, 210, 0.15);
+  --radius-sm: 6px;
+  --radius-btn: 10px;
+  --radius-card: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
 
-  --container-max: 1200px;
-  --header-height: 72px;
-  --section-padding: 4rem;
-  --section-padding-mobile: 2.5rem;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 16px 48px rgba(0, 86, 210, 0.12);
+  --shadow-glow: 0 8px 32px rgba(0, 86, 210, 0.35);
+  --shadow-header: 0 4px 24px rgba(0, 0, 0, 0.25);
 
-  --transition-fast: 0.2s ease;
-  --transition-medium: 0.3s ease;
+  --container-max: 1180px;
+  --header-height: 80px;
+  --section-padding: 5.5rem;
+  --section-padding-mobile: 3.5rem;
+
+  --transition-fast: 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-medium: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
