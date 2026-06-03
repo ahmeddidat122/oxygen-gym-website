@@ -1,0 +1,31 @@
+:root {
+  --color-primary: #0056d2;
+  --color-primary-dark: #0044a8;
+  --color-primary-light: #3d7fe8;
+  --color-bg-dark: #121212;
+  --color-bg-light: #f8f9fa;
+  --color-bg-white: #ffffff;
+  --color-text: #212529;
+  --color-text-muted: #6c757d;
+  --color-text-inverse: #ffffff;
+  --color-border: #dee2e6;
+  --color-success: #198754;
+
+  --overlay-hero: rgba(0, 0, 0, 0.5);
+
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-btn: 6px;
+  --radius-card: 8px;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 30px rgba(0, 86, 210, 0.15);
+
+  --container-max: 1200px;
+  --header-height: 72px;
+  --section-padding: 4rem;
+  --section-padding-mobile: 2.5rem;
+
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+}
