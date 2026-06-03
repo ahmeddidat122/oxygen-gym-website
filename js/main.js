@@ -96,6 +96,15 @@
     resetInterval();
   }
 
+  /* Pre-select plan when clicking pricing CTAs on homepage */
+  var trialPlanInput = document.getElementById("trial-plan");
+  document.querySelectorAll("[data-plan]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      var plan = link.getAttribute("data-plan");
+      if (trialPlanInput && plan) trialPlanInput.value = plan;
+    });
+  });
+
   /* Smooth scroll for anchor links */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {

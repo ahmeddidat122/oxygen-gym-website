@@ -119,9 +119,9 @@
             <p class="value-prop__text">Certified coaches who meet you where you are and help you progress safely.</p>
           </article>
           <article class="value-prop">
-            <div class="value-prop__icon" aria-hidden="true">🅿️</div>
-            <h3 class="value-prop__title">Free Parking</h3>
-            <p class="value-prop__text">Dedicated member parking right outside. No stress, just show up and train.</p>
+            <div class="value-prop__icon" aria-hidden="true">🤝</div>
+            <h3 class="value-prop__title">Welcoming for All Levels</h3>
+            <p class="value-prop__text">First time at a gym? Our team and community make it easy to start — no judgment, just support.</p>
           </article>
         </div>
       </div>
@@ -201,7 +201,60 @@
       </div>
     </section>
 
-    <section id="trial-form" class="section trial-form-section">
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Membership</span>
+          <h2>Simple, Transparent Pricing</h2>
+          <p class="section__subtitle">No hidden fees. All plans include locker rooms, showers, and free parking.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3 class="pricing-card__name">Basic</h3>
+            <p class="pricing-card__price">৳2,500</p>
+            <p class="pricing-card__period">per month</p>
+            <ul class="pricing-card__features">
+              <li>Full gym floor access</li>
+              <li>Cardio &amp; free weights</li>
+              <li>Locker room &amp; showers</li>
+              <li>Free member parking</li>
+              <li>Staffed hours access</li>
+            </ul>
+            <a href="#trial-form" class="btn btn--primary btn--block" data-plan="basic" data-track="pricing_basic">Get Started</a>
+          </article>
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">Recommended</span>
+            <h3 class="pricing-card__name">Premium</h3>
+            <p class="pricing-card__price">৳4,500</p>
+            <p class="pricing-card__period">per month</p>
+            <ul class="pricing-card__features">
+              <li>Everything in Basic</li>
+              <li>Unlimited group classes</li>
+              <li>24/7 gym access</li>
+              <li>1 guest pass per month</li>
+              <li>Smoothie bar 10% discount</li>
+            </ul>
+            <a href="#trial-form" class="btn btn--primary btn--block" data-plan="premium" data-track="pricing_premium">Get Started</a>
+          </article>
+          <article class="pricing-card">
+            <h3 class="pricing-card__name">Elite</h3>
+            <p class="pricing-card__price">৳7,500</p>
+            <p class="pricing-card__period">per month</p>
+            <ul class="pricing-card__features">
+              <li>Everything in Premium</li>
+              <li>1 personal training session/month</li>
+              <li>Reserved locker</li>
+              <li>Priority class booking</li>
+              <li>Nutrition check-in quarterly</li>
+            </ul>
+            <a href="#trial-form" class="btn btn--primary btn--block" data-plan="elite" data-track="pricing_elite">Get Started</a>
+          </article>
+        </div>
+        <p class="membership-note">First week free on Premium &amp; Elite when you sign up this month. <a href="membership.html">See membership FAQ</a>.</p>
+      </div>
+    </section>
+
+    <section id="trial-form" class="section section--light trial-form-section">
       <div class="container">
         <div class="section__header">
           <span class="section__label">Get Started</span>
@@ -215,6 +268,7 @@
               <label>Don't fill this out: <input name="bot-field"></label>
             </p>
             <input type="hidden" name="source" value="homepage">
+            <input type="hidden" name="plan" id="trial-plan" value="">
             <div class="form-group">
               <label for="trial-name">Full Name</label>
               <input type="text" id="trial-name" name="name" required autocomplete="name">
@@ -292,6 +346,7 @@
     <input type="tel" name="phone">
     <select name="goals"></select>
     <input type="hidden" name="source">
+    <input type="hidden" name="plan">
     <input type="hidden" name="membership-tier">
     <textarea name="message"></textarea>
   </form>
