@@ -55,47 +55,6 @@
     });
   });
 
-  /* Testimonial slider */
-  const slider = document.querySelector(".testimonial-slider");
-  if (slider) {
-    const track = slider.querySelector(".testimonial-slider__track");
-    const slides = slider.querySelectorAll(".testimonial-slide");
-    const dots = slider.querySelectorAll(".testimonial-slider__dot");
-    let current = 0;
-    let intervalId;
-
-    function goTo(index) {
-      current = (index + slides.length) % slides.length;
-      track.style.transform = "translateX(-" + current * 100 + "%)";
-      dots.forEach(function (dot, i) {
-        dot.classList.toggle("is-active", i === current);
-        dot.setAttribute("aria-selected", i === current ? "true" : "false");
-      });
-    }
-
-    dots.forEach(function (dot, i) {
-      dot.addEventListener("click", function () {
-        goTo(i);
-        resetInterval();
-      });
-    });
-
-    function resetInterval() {
-      clearInterval(intervalId);
-      intervalId = setInterval(function () {
-        goTo(current + 1);
-      }, 6000);
-    }
-
-    slider.addEventListener("mouseenter", function () {
-      clearInterval(intervalId);
-    });
-
-    slider.addEventListener("mouseleave", resetInterval);
-
-    resetInterval();
-  }
-
   /* Pre-select plan when clicking pricing CTAs on homepage */
   var trialPlanInput = document.getElementById("trial-plan");
   document.querySelectorAll("[data-plan]").forEach(function (link) {
