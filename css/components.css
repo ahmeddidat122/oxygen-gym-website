@@ -426,13 +426,11 @@ body.nav-open {
 }
 
 .accordion__panel {
-  display: none;
-  padding-bottom: 1.25rem;
   color: var(--color-text-muted);
 }
 
-.accordion__panel.is-open {
-  display: block;
+.accordion__panel-inner {
+  padding-bottom: 0.25rem;
 }
 
 .accordion__meta {
